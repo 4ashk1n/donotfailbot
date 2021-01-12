@@ -14,17 +14,9 @@ colorama==0.4.4
 config==0.5.0.post0
 cx-Freeze==6.3
 DateTime==4.3
-discord==1.0.1
-discord.py==1.4.1
 distlib==0.3.1
 filelock==3.0.12
 future==0.18.2
-google-api-core==1.23.0
-google-api-python-client==1.12.5
-google-auth==1.23.0
-google-auth-httplib2==0.0.4
-google-auth-oauthlib==0.4.2
-googleapis-common-protos==1.52.0
 httplib2==0.18.1
 idna==2.10
 importlib-metadata==2.0.0
@@ -60,8 +52,6 @@ tqdm==4.48.2
 uritemplate==3.0.1
 urllib3==1.25.10
 virtualenv==20.0.31
-vk==2.0.2
-vk-api==11.9.0
 win32-setctime==1.0.3
 yarl==1.5.1
 zipp==3.4.0
