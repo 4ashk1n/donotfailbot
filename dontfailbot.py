@@ -1554,6 +1554,7 @@ def start_message(message):  # СТАРТ
 def FI(message):
     global insertdb
     try:
+        users.append(message.chat.id)
         students.append(message.chat.id)
         students.sort()
         updusers()
