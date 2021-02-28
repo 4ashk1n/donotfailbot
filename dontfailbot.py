@@ -39,6 +39,27 @@ dbS=dbStats.cursor()
 dbTasks=sqlite3.connect('tasks.db', check_same_thread=False)
 dbT=dbTasks.cursor()
 
+dbT.execute('''CREATE TABLE IF NOT EXISTS "allTasks" (
+	"taskID"	INTEGER,
+	"taskText"	TEXT,
+	"taskAnswer"	TEXT,
+	"teacherID"	INTEGER,
+	"taskTime"	TEXT
+, "fileID"	TEXT)''')
+dbTasks.commit()
+dbT.execute('''CREATE TABLE IF NOT EXISTS "tasks" (
+	"taskID"	INTEGER,
+	"taskText"	TEXT,
+	"taskAnswer"	TEXT
+, "fileID"	INTEGER)''')
+dbTasks.commit()
+dbU.execute('''CREATE TABLE IF NOT EXISTS "users" (
+	"id"	INTEGER,
+	"name"	TEXT,
+	"teacher"	INTEGER
+)''')
+dbUsers.commit()
+
 dbU.execute('SELECT id FROM users WHERE (teacher LIKE 1)')
 Teachers=dbU.fetchall()
 dbU.execute('SELECT id FROM users WHERE (teacher LIKE 0)')
