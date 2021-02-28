@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+   <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+     <title>Задания</title>
+    </head>
+   <body>
+        <h1>Статистика</h1>
+        <h3>
+            <a href="/taskslist">Список заданий</a>
+        </h3>
+      <table border = 1>
+         <thead>
+            <td>Имя пользователя</td>
+            <td>ID задания</td>
+            <td>Время отправки ответа</td>
+            <td>Время отправки задания</td>
+            <td>Ответ пользователя</td>
+            <td>Правильность</td>
+         </thead>
+        {% for rows in users %}
+             {% for row in rows %}
+                <tr>
+                   <td>{{row[0]}}</td>
+                    <td><a href="/taskslist">{{row[1]}}</a></td>
+                    <td> {{ row[2]}}</td>
+                    <td> {{ row[3]}}</td>
+                    <td> {{ row[4]}}</td>
+                    <td> {{ row[5]}}</td>
+
+
+                </tr>
+             {% endfor %}
+          {% endfor %}
+      </table>
+
+<!--      <a href = "/">Go back to home page</a>-->
+
+   </body>
+</html>

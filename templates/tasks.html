@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+   <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+     <title>Задания</title>
+    </head>
+   <body>
+      <h1>Список заданий</h1>
+        <h3>
+            <a href="/usersstat">Статистика</a>
+        </h3>
+      <table border = 1>
+         <thead>
+            <td>ID</td>
+            <td>Текст</td>
+            <td>Ответ</td>
+            <td>Картинка</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row[0]}}</td>
+               <td>{{row[1]}}</td>
+               <td> {{ row[2]}}</td>
+               <td><a href = "{{ row[3]}}">
+                  <img src = "{{ row[3]}}"
+                      style="width: 500px; max-width: 100%; height: auto"
+			title="Нажмите, чтобы увидеть полную версию"  alt="Картинка отсутствует"/>
+                  </a>
+               </td>
+
+
+            </tr>
+         {% endfor %}
+      </table>
+      
+<!--      <a href = "/">Go back to home page</a>-->
+      
+   </body>
+</html>
