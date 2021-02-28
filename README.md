@@ -1,6 +1,3 @@
-# donotfailbot
-LMS System for Telegram
-
 Do not fail bot 1.2
 ========
 
