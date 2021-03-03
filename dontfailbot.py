@@ -2531,7 +2531,7 @@ def googledocs():
     return file_list
 
 @bot.message_handler(commands=['startbot'],content_types=['photo','text','sticker','file'])
-def flaskStart():
+def flaskStart(message):
     global app
     app.run(host="0.0.0.0",
             port=302)
